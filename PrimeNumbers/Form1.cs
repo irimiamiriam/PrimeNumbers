@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using System.Windows.Forms.VisualStyles;
 
 namespace PrimeNumbers
@@ -62,6 +63,8 @@ namespace PrimeNumbers
                 Button clickedButon = (Button)sender;
                 int d = 1;
                 long i = Convert.ToInt32(numere.Text);
+                string tip;
+               
                 for (int j = 1; j <= i / 2; j++)
                 {
                     if (i % j == 0) { d++; }
@@ -69,10 +72,13 @@ namespace PrimeNumbers
                 if (d == 2)
                 {
                     this.BackColor = System.Drawing.Color.Green; numere.BackColor = this.BackColor;
-                }
-                else { this.BackColor = System.Drawing.Color.Crimson; numere.BackColor = this.BackColor; }
+                    tip = " -prim";
 
+                }
+                else { this.BackColor = System.Drawing.Color.Crimson; numere.BackColor = this.BackColor; tip = " -neprim";  }
                 await Task.Delay(2000); this.BackColor = System.Drawing.Color.SlateGray;
+                Clipboard.SetText(numere.Text);
+                history.Text = history.Text+ Clipboard.GetText()+tip + "\r\n" ;
             }numere.BackColor = this.BackColor;
         }
 
@@ -81,7 +87,9 @@ namespace PrimeNumbers
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+   
+
+        private void history_Click(object sender, EventArgs e)
         {
 
         }
