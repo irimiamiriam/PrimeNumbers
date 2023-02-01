@@ -10,29 +10,9 @@ namespace PrimeNumbers
         public PrimeNumbers()
         {
             InitializeComponent();
-            numere.BackColor = this.BackColor; 
+            numere.BackColor = this.BackColor;
 
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-            
-        }
-
-        
-
-        private void Form1_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PrimeNumbers_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
 
         private void numere_TextChanged(object sender, EventArgs e)
         {
@@ -63,7 +43,7 @@ namespace PrimeNumbers
                 Button clickedButon = (Button)sender;
                 int d = 1;
                 long i = Convert.ToInt32(numere.Text);
-                string tip;
+                
                
                 for (int j = 1; j <= i / 2; j++)
                 {
@@ -72,27 +52,16 @@ namespace PrimeNumbers
                 if (d == 2)
                 {
                     this.BackColor = System.Drawing.Color.Green; numere.BackColor = this.BackColor;
-                    tip = " -prim";
+                   
 
                 }
-                else { this.BackColor = System.Drawing.Color.Crimson; numere.BackColor = this.BackColor; tip = " -neprim";  }
+                else { this.BackColor = System.Drawing.Color.Crimson; numere.BackColor = this.BackColor;   }
                 await Task.Delay(2000); this.BackColor = System.Drawing.Color.SlateGray;
-                Clipboard.SetText(numere.Text);
-                history.Text = history.Text+ Clipboard.GetText()+tip + "\r\n" ;
+                
             }numere.BackColor = this.BackColor;
         }
 
-        private void invalid_Click(object sender, EventArgs e)
-        {
-
-        }
-
-   
-
-        private void history_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
         
 

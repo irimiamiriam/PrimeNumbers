@@ -29,7 +29,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrimeNumbers));
             this.numere = new System.Windows.Forms.TextBox();
             this.Buton = new System.Windows.Forms.Button();
@@ -37,7 +36,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.semn = new System.Windows.Forms.PictureBox();
             this.IntroducetiNr = new System.Windows.Forms.PictureBox();
-            this.history = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.semn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IntroducetiNr)).BeginInit();
@@ -50,10 +48,9 @@
             this.numere.Font = new System.Drawing.Font("Times New Roman", 40.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.numere.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.numere.Location = new System.Drawing.Point(135, 59);
-            this.numere.Multiline = true;
             this.numere.Name = "numere";
             this.numere.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.numere.Size = new System.Drawing.Size(704, 72);
+            this.numere.Size = new System.Drawing.Size(704, 78);
             this.numere.TabIndex = 0;
             this.numere.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numere.TextChanged += new System.EventHandler(this.numere_TextChanged);
@@ -86,7 +83,6 @@
             this.invalid.TabIndex = 3;
             this.invalid.Text = "Invalid, te rog sa introduci un numar natural";
             this.invalid.Visible = false;
-            this.invalid.Click += new System.EventHandler(this.invalid_Click);
             // 
             // pictureBox1
             // 
@@ -122,27 +118,12 @@
             this.IntroducetiNr.TabIndex = 7;
             this.IntroducetiNr.TabStop = false;
             // 
-            // history
-            // 
-            this.history.BackColor = System.Drawing.Color.Lavender;
-            this.history.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.history.Enabled = true;
-            this.history.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.history.Location = new System.Drawing.Point(683, 182);
-            this.history.Multiline = true;
-            this.history.Name = "history";
-            this.history.ReadOnly = true;
-            this.history.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.history.Size = new System.Drawing.Size(286, 225);
-            this.history.TabIndex = 8;
-            // 
             // PrimeNumbers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
             this.ClientSize = new System.Drawing.Size(981, 585);
-            this.Controls.Add(this.history);
             this.Controls.Add(this.semn);
             this.Controls.Add(this.invalid);
             this.Controls.Add(this.Buton);
@@ -150,8 +131,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.IntroducetiNr);
             this.Name = "PrimeNumbers";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "PrimeNumbers";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.semn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IntroducetiNr)).EndInit();
@@ -171,6 +151,5 @@
         private PictureBox pictureBox1;
         private PictureBox semn;
         private PictureBox IntroducetiNr;
-        private TextBox history;
     }
 }
