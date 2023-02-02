@@ -33,10 +33,10 @@
             this.numere = new System.Windows.Forms.TextBox();
             this.Buton = new System.Windows.Forms.Button();
             this.invalid = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ButonBackground = new System.Windows.Forms.PictureBox();
             this.semn = new System.Windows.Forms.PictureBox();
             this.IntroducetiNr = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButonBackground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.semn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IntroducetiNr)).BeginInit();
             this.SuspendLayout();
@@ -56,16 +56,16 @@
             this.numere.TextChanged += new System.EventHandler(this.numere_TextChanged);
             // 
             // Buton
-            // 
+            this.Buton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
             this.Buton.BackColor = System.Drawing.Color.Transparent;
-            this.Buton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Buton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Buton.FlatAppearance.BorderSize = 0;
             this.Buton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Buton.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Buton.ForeColor = System.Drawing.Color.Violet;
-            this.Buton.Location = new System.Drawing.Point(288, 456);
+            this.Buton.Location = new System.Drawing.Point(271, 454);
             this.Buton.Name = "Buton";
-            this.Buton.Size = new System.Drawing.Size(400, 76);
+            this.Buton.Size = new System.Drawing.Size(436, 80);
             this.Buton.TabIndex = 2;
             this.Buton.Text = "OK";
             this.Buton.UseVisualStyleBackColor = true;
@@ -84,16 +84,16 @@
             this.invalid.Text = "Invalid, te rog sa introduci un numar natural";
             this.invalid.Visible = false;
             // 
-            // pictureBox1
+            // ButonBackground
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(121, 423);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(756, 161);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.ButonBackground.BackColor = System.Drawing.Color.Transparent;
+            this.ButonBackground.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButonBackground.BackgroundImage")));
+            this.ButonBackground.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ButonBackground.Location = new System.Drawing.Point(121, 423);
+            this.ButonBackground.Name = "ButonBackground";
+            this.ButonBackground.Size = new System.Drawing.Size(756, 161);
+            this.ButonBackground.TabIndex = 4;
+            this.ButonBackground.TabStop = false;
             // 
             // semn
             // 
@@ -120,6 +120,7 @@
             // 
             // PrimeNumbers
             // 
+            this.AcceptButton = this.Buton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateGray;
@@ -128,11 +129,12 @@
             this.Controls.Add(this.invalid);
             this.Controls.Add(this.Buton);
             this.Controls.Add(this.numere);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.ButonBackground);
             this.Controls.Add(this.IntroducetiNr);
             this.Name = "PrimeNumbers";
             this.Text = "PrimeNumbers";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PrimeNumbers_KeyPress);
+            ((System.ComponentModel.ISupportInitialize)(this.ButonBackground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.semn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IntroducetiNr)).EndInit();
             this.ResumeLayout(false);
@@ -148,7 +150,7 @@
         private Button Buton;
         private Label invalid;
 
-        private PictureBox pictureBox1;
+        private PictureBox ButonBackground;
         private PictureBox semn;
         private PictureBox IntroducetiNr;
     }

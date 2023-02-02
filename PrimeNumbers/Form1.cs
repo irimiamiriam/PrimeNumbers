@@ -5,8 +5,8 @@ using System.Windows.Forms.VisualStyles;
 namespace PrimeNumbers
 {   
     public partial class PrimeNumbers : Form
-    {   
-        bool pos = true;
+    { 
+       int res;
         public PrimeNumbers()
         {
             InitializeComponent();
@@ -16,53 +16,50 @@ namespace PrimeNumbers
 
         private void numere_TextChanged(object sender, EventArgs e)
         {
-            
+
             invalid.Visible = false;
-            semn.Visible= false; 
-            pos = true; 
-            string text = numere.Text;
-            for (int i = 0; i < text.Length; i++) { 
-                if (!char.IsNumber(text[i]))
-                {
-                    pos = false;
-                    invalid.Visible = true;
-                    semn.Visible = true;
-                    
-                } }
-
-          
-            
-        }
-
-        async void Buton_Click(object sender, EventArgs e)
-        {
-            
-            
-            if (pos)
+            semn.Visible = false;
+            bool IsNumber = Int32.TryParse(numere.Text, out res);
+            if (!IsNumber && !string.IsNullOrEmpty(numere.Text))
             {
-                Button clickedButon = (Button)sender;
-                int d = 1;
-                long i = Convert.ToInt32(numere.Text);
-                
-               
-                for (int j = 1; j <= i / 2; j++)
-                {
-                    if (i % j == 0) { d++; }
-                }
-                if (d == 2)
-                {
-                    this.BackColor = System.Drawing.Color.Green; numere.BackColor = this.BackColor;
-                   
+                invalid.Visible = true;
+                semn.Visible = true; ;
+            }
 
-                }
-                else { this.BackColor = System.Drawing.Color.Crimson; numere.BackColor = this.BackColor;   }
-                await Task.Delay(2000); this.BackColor = System.Drawing.Color.SlateGray;
-                
-            }numere.BackColor = this.BackColor;
         }
 
         
+        async void Buton_Click(object sender, EventArgs e)
+        {
+            
+            bool IsNumber = Int32.TryParse(numere.Text, out res);
+            int d = 1 ;
+            if (IsNumber)
+            {
+
+                for (int j = 1; j <= res/ 2; j++)
+                {
+                    if (res % j == 0) { d++; }
+                }
+                if (d==2)
+                {
+                    this.BackColor = System.Drawing.Color.Green; numere.BackColor = this.BackColor;
+
+
+                }
+                else { this.BackColor = System.Drawing.Color.Crimson; numere.BackColor = this.BackColor; }
+                await Task.Delay(2000); this.BackColor = System.Drawing.Color.SlateGray;
+            }numere.BackColor = this.BackColor;
+            }
+
+        private void PrimeNumbers_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if( e.KeyChar == (char)Keys.Enter ) { Buton.PerformClick(); }
+        }
     }
+
+        
+    
         
 
         
