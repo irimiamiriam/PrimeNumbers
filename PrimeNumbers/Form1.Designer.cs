@@ -43,6 +43,7 @@
             // 
             // numere
             // 
+            this.numere.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.numere.BackColor = System.Drawing.Color.SlateGray;
             this.numere.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.numere.Font = new System.Drawing.Font("Times New Roman", 40.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -56,14 +57,16 @@
             this.numere.TextChanged += new System.EventHandler(this.numere_TextChanged);
             // 
             // Buton
-            this.Buton.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            // 
+            this.Buton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Buton.BackColor = System.Drawing.Color.Transparent;
             this.Buton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Buton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.Buton.FlatAppearance.BorderSize = 0;
             this.Buton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Buton.Font = new System.Drawing.Font("Times New Roman", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Buton.ForeColor = System.Drawing.Color.Violet;
-            this.Buton.Location = new System.Drawing.Point(271, 454);
+            this.Buton.Location = new System.Drawing.Point(268, 455);
             this.Buton.Name = "Buton";
             this.Buton.Size = new System.Drawing.Size(436, 80);
             this.Buton.TabIndex = 2;
@@ -73,6 +76,7 @@
             // 
             // invalid
             // 
+            this.invalid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.invalid.BackColor = System.Drawing.Color.Transparent;
             this.invalid.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.invalid.ForeColor = System.Drawing.Color.Purple;
@@ -86,6 +90,7 @@
             // 
             // ButonBackground
             // 
+            this.ButonBackground.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ButonBackground.BackColor = System.Drawing.Color.Transparent;
             this.ButonBackground.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButonBackground.BackgroundImage")));
             this.ButonBackground.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -97,6 +102,7 @@
             // 
             // semn
             // 
+            this.semn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.semn.BackColor = System.Drawing.Color.Transparent;
             this.semn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("semn.BackgroundImage")));
             this.semn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -109,6 +115,7 @@
             // 
             // IntroducetiNr
             // 
+            this.IntroducetiNr.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.IntroducetiNr.BackColor = System.Drawing.Color.Transparent;
             this.IntroducetiNr.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("IntroducetiNr.BackgroundImage")));
             this.IntroducetiNr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

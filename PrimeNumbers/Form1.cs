@@ -20,10 +20,10 @@ namespace PrimeNumbers
             invalid.Visible = false;
             semn.Visible = false;
             bool IsNumber = Int32.TryParse(numere.Text, out res);
-            if (!IsNumber && !string.IsNullOrEmpty(numere.Text))
+            if (!IsNumber && !string.IsNullOrWhiteSpace(numere.Text))
             {
                 invalid.Visible = true;
-                semn.Visible = true; ;
+                semn.Visible = true; 
             }
 
         }
@@ -43,12 +43,12 @@ namespace PrimeNumbers
                 }
                 if (d==2)
                 {
-                    this.BackColor = System.Drawing.Color.Green; numere.BackColor = this.BackColor;
+                    this.BackColor = Color.Green; numere.BackColor = this.BackColor;
 
 
                 }
-                else { this.BackColor = System.Drawing.Color.Crimson; numere.BackColor = this.BackColor; }
-                await Task.Delay(2000); this.BackColor = System.Drawing.Color.SlateGray;
+                else { this.BackColor =Color.Crimson; numere.BackColor = this.BackColor; }
+                await Task.Delay(2000); this.BackColor = Color.SlateGray;
             }numere.BackColor = this.BackColor;
             }
 
